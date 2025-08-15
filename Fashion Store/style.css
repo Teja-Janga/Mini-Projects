@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: TW cen MT;
+}
+
+a{
+    color: black;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+header{
+    height: 65px;
+    background-color: #806BDC;
+    text-align: center;
+}
+
+.NavBar{
+    padding: 10px;
+}
+
+#navbar-title{
+    color: white;
+    font-size: 35px;
+}
+
+.Items{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#item-table{
+    width: 100%;
+    text-align: center;
+}
+
+.Item-img{
+    height: 64px;
+}
+
+.Item-tag{
+    font-size: 18px;
+}
+
+.Item-tag:hover{
+    color: #806BDC;
+}
+
+.Shopping-container{
+    background-color: rgb(176, 172, 172);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#shopping-time-img{
+    margin-top: 30px;
+    width: 90vw;
+    height: 60vh;
+    border: 1px solid black;
+}
+
+.Sales-table{
+    width: 90vw;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 12px;
+}
+
+.Sales-table-head{
+    background-color: #7e6cce;
+    font-size: 20px;
+}
+
+.Information{
+    width: 94vw;
+    margin: 20px;
+    font-size: 15px;
+    list-style-position: inside;
+}
+
+footer{
+    height: 30px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+<!-- 🌐 TOPIC 1: Fetch API & AJAX — Getting Data from the Web -->
+
+<!-- Weather Dashboard -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard - Fetch API Mastery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weatherDashboardContainer">
+        <h1>🌤️ Weather Dashboard</h1>
+        
+        <div class="cityInputSection">
+            <h3>Get Weather Information</h3>
+            <input 
+                type="text" 
+                id="cityNameInput" 
+                class="weatherLocationInput" 
+                placeholder="Enter city name (e.g., New York, London)">
+            <button id="fetchWeatherDataButton" class="fetchWeatherButton">
+                🌍 Get Weather
+            </button>
+        </div>
+        
+        <div class="weatherDisplayArea" id="weatherResultsContainer">
+            <p>👆 Enter a city name and click "Get Weather" to see live weather data!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
