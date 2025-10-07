@@ -303,10 +303,6 @@ nav ul li a:hover::after {
 .fa-linkedin {
     color: rgb(0, 50, 180);
     background: #fff;
-    background-position: center;
-    border-radius: 5px;
-    width: 27px;
-    height: 29px;
 }
 
 .fa-instagram {
@@ -402,21 +398,11 @@ nav .fa-solid {display: none;}
     .about-col-2, .tab-contents {font-size: 12px;}
     .tab-links {font-size: 14px;}
     .work-list { display: flex; flex-direction: column; }
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-        justify-items: center;
-    }
-    .fa-linkedin {
-        width: 29px;
-        height: 29px;
-    }
+    .contact-left, .contact-right { flex-basis: 100%; justify-items: center; }
     .copyright {font-size: 14px;}
 }
 
 @media (min-width:600px ) and (max-width: 1100px) {
     .work-list { display: flex; flex-direction: column; }
-    .contact-left p {
-        font-size: 14px;
-    }
-    .fa-linkedin {height: 30px; width: 29px;}
+    .contact-left p { font-size: 14px; }
 }
