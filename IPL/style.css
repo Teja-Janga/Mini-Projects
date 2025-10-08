@@ -1,0 +1,215 @@
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading {
+    text-align: center;
+    background: #111;
+    color: #fff;
+    font-size: 2.5em;
+}
+/* ==================================== Hero Section ================================= */
+.hero-section {
+    background: linear-gradient(90deg, #292b2c 70%, #ffe066 100%);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    min-height: 240px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin: 0 0 5px;
+}
+
+.hero-logo {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+/* ================================== Teams Cards Grid ============================== */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 32px 8px;
+}
+
+.team-card {
+    background: #333;
+    border-radius: 10px;
+    text-align: center;
+    padding: 24px 14px;
+    width: 200px;
+    transition: transform 0.3s;
+    }
+
+.team-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    transition: transform 0.3s;
+}
+
+.team-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.team-name {
+    font-size: 1.15em;
+    color: #ffd700;
+    font-weight: 700;
+    margin-top: 7px;
+    letter-spacing: 0.06em;
+}
+
+/* ==================================== Match Highlights ============================== */
+.highlights-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    padding: 25px 5px;
+}
+
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 200px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    overflow: hidden;
+}
+.highlight-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.2s;
+}
+.highlight-card figcaption {
+    color: #ffd700;
+    background: #222;
+    padding: 10px 8px;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.highlight-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+.highlight-card:hover img { opacity: 0.7; }
+
+/* ====================================== Footer ======================================= */
+.site-footer {
+    margin-top: 40px;
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+}
+footer span i { font-size: 25px;}
+footer span a {
+    text-decoration: none;
+    color: #fff;
+}
+.footer-social ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    margin: 20px 0 0;
+    padding: 0;
+}
+.footer-social li a { font-size: 1.7em;}
+.footer-social li a:hover {
+    filter: brightness(200%);
+} 
+
+.fa-linkedin { color: rgb(0, 50, 180); }
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+
+.fa-github {
+    background: linear-gradient(45deg, #4078c0, #6e5494);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+/* ===================================== Slide Animation =============================== */
+.team-card, .highlight-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp .7s forwards;
+}
+.team-card:nth-child(n) { animation-delay: calc(0.08s * var(--card-index, 1)); }
+.highlight-card:nth-child(n) { animation-delay: calc(0.10s * var(--card-index, 1)); }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: none; }
+}
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 28px;
+    padding: 12px 18px;
+    border-radius: 50px;
+    background: #ffd700;
+    color: #111;
+    font-size: 1.08em;
+    border: none;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 55;
+    transition: opacity 0.3s;
+}
+#backToTop:hover { opacity: 1; }
+/* ===================================== Media Queries ================================== */
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 100%;
+    }
+    .toggle-btn { display: block; }
+    .hero-section { padding: 36px 10px 24px 10px; }
+    .hero-section h1 { font-size: 1.7em; }
+    .team-grid { gap: 14px; padding: 14px 2px; }
+    .team-card { width: 100px; padding: 12px 4px 8px 4px; }
+    .team-logo { width: 48px; height: 48px; }
+    .highlight-card { width: 120px; }
+    .highlight-card img { height: 70px; }
+    .highlight-card figcaption { font-size: 0.75em; padding: 7px 2px; }
+    .site-footer { font-size: 0.88em; padding: 14px 2px; }
+    .footer-social ul { gap: 12px; }
+    .footer-social li a { font-size: 1.34em; }
+    footer {font-size: 0.8em;}
+}
