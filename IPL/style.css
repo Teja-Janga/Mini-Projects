@@ -44,7 +44,7 @@ body {
     padding: 24px 14px;
     width: 200px;
     transition: transform 0.3s;
-    }
+}
 
 .team-card:hover {
     transform: translateY(-6px) scale(1.04);
@@ -172,9 +172,9 @@ footer span a {
 }
 #backToTop {
     position: fixed;
-    bottom: 30px;
-    right: 28px;
-    padding: 12px 18px;
+    bottom: 25px;
+    right: 25px;
+    padding: 8px 15px;
     border-radius: 50px;
     background: #ffd700;
     color: #111;
@@ -190,6 +190,7 @@ footer span a {
 /* ===================================== Media Queries ================================== */
 
 @media (max-width: 700px) {
+    .heading { font-size: 1.5em; }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -207,9 +208,11 @@ footer span a {
     .team-logo { width: 48px; height: 48px; }
     .highlight-card { width: 120px; }
     .highlight-card img { height: 70px; }
-    .highlight-card figcaption { font-size: 0.75em; padding: 7px 2px; }
+    .highlight-card figcaption { font-size: 0.68em; padding: 7px 2px; }
     .site-footer { font-size: 0.88em; padding: 14px 2px; }
     .footer-social ul { gap: 12px; }
     .footer-social li a { font-size: 1.34em; }
     footer {font-size: 0.8em;}
+    #backToTop {font-size: 0.8em; padding: 5px 10px;}
 }
+
