@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* ==================================== Dark Mode ================================== */
+#toggleDarkMode {
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ddd;
+}
+body.dark-mode {
+    background: linear-gradient(135deg, #20242d 40%, #181924 100%);
+    color: #e3e6f9;
+}
+.dark-mode .registrationContainer {
+    background: #3f4c6b;
+    color: #eee;
+}
+.dark-mode .fas {color: #fff;}
+.dark-mode .formTitle,
+.dark-mode .inputLabel,
+.dark-mode .successMessage {color: #e3e6f9 !important;}
+.dark-mode .formInput {
+    background: #22283a;
+    color: #f7f7ff;
+    border-color: #484d6e;
+}
+.dark-mode .formInput:focus {
+    background: #22283a;
+    box-shadow: 0 0 0 4px rgba(102,126,234,0.26);
+}
+.dark-mode .validationFeedback { color: #96cef2; }
+.dark-mode .passwordStrengthContainer,
+.dark-mode .password-rules { color: #baf1f5; }
+.dark-mode .successMessage {
+  background: #233142;
+  border-color: #354874;
+  color: #acfafe;
+}
+/* ==================================================================================== */
+.registrationContainer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.formTitle {
+    text-align: center;
+    color: black;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.inputLabel {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.formInput.inputValid { border-color: #28a745; background: #f8fff9; }
+.formInput.inputInvalid { border-color: #dc3545; background: #fff8f8; }
+
+.validationFeedback {
+    margin-top: 8px;
+    font-size: 13px;
+    min-height: 18px;
+    font-weight: 650;
+}
+
+.validationSuccess {color: #52da52;}
+.validationError {color: #ff0026;}
+.passwordStrengthContainer { margin-top: 8px; }
+
+.passwordStrengthBar {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.passwordStrengthFill {
+    height: 100%;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.passwordWrapper { position: relative; width: 100%; }
+
+.togglePassword {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-size: 1.15em;
+    z-index: 2;
+    padding: 2px;
+}
+
+.password-rules {
+    display: none;
+    margin: 10px 0 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    list-style-type: disc;
+}
+.password-rules.active { display: block;}
+.password-rules li.valid {
+    color: #28a745;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+.password-rules li.invalid { color: #ff0026; }
+
+.strength-0 { width: 0%; background: #e9ecef; }
+.strength-1 { width: 25%; background: #dc3545; }
+.strength-2 { width: 50%; background: #fd7e14; }
+.strength-3 { width: 75%; background: #ffc107; }
+.strength-4 { width: 100%; background: #28a745; }
+
+.passwordStrengthText { font-size: 12px; margin-top: 4px; font-weight: 500; }
+/* ================================= Submit Button ================================== */
+.buttonContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 18px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #333;
+}
+
+.submitButton:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+/* ================================================================================== */
+
+.successMessage {
+    background: #a1e9b1;
+    color: #117128;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+    display: none;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px #222;
+    animation: popUpFade 0.45s cubic-bezier(0.43, 0.56, 0.36, 1.53);
+}
+@keyframes popUpFade {
+    0% { transform: scale(0.60); opacity: 0;}
+    80% { transform: scale(1.06); opacity: 1;}
+    100% { transform: scale(1); opacity: 1;}
+}
+
+#closeSuccessBtn {
+    padding: 8px 10px;
+    font-size: 17px;
+    margin-top:16px;
+    border: none;
+    color: #fff;
+    background: hsl(194, 100%, 40%);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#closeSuccessBtn:hover {
+    transform: translate(2px, -3px);
+    transition: 0.3s;
+    box-shadow: 0 0 20px #222;
+}
+
+.loadingSpinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ================================== Media Queries ================================ */
+
+@media (max-width: 600px) {
+    .registrationContainer {
+        max-width: 98vw;
+        padding: 16px;
+        border-radius: 7px;
+    }
+    .formTitle { font-size: 22px; margin-bottom: 14px; }
+    .inputGroup { margin-bottom: 10px; }
+    .formInput, .inputLabel { font-size: 15px; padding: 11px; }
+    .passwordStrengthContainer,
+    .passwordStrengthText,
+    .password-rules { font-size: 12px; }
+    #toggleDarkMode { font-size: 13px; padding: 5px 8px; }
+}
+
+@media (max-width: 400px) {
+    .registrationContainer { padding: 5px; font-size: 13px; }
+    .formTitle { font-size: 17px; }
+}
