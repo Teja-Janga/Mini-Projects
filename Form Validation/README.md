@@ -21,5 +21,5 @@ A modern user registration form with robust validation, password strength checks
 - Built with **HTML5, CSS3, JavaScript (vanilla)**
 - Designed and coded by [Teja Janga]
 
-
+*Project by Teja Janga, 2025*
 
