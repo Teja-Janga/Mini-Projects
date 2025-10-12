@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h2 id="welcomeMsg">👋 Hey Buddy! Welcome to the Healthy Meal & Water Tracker!</h2>
+        <div class = "container">
+            <header>
+                <h1>🥗 Healthy Meal & Water Tracker 💧</h1>
+                <button id="theme-toggle" style="margin-bottom:18px;">🌙 Dark Mode</button>
+            </header>
+
+            <main>
+                <section id="date-section">
+                    <label for="track-date">Select Date:</label>
+                    <input type="date" id="track-date">
+                </section>
+
+                <section id="goals">
+                    <h2>🎯 Daily Goals</h2>
+                    <form id="goal-form">
+                        <label for="goal-water">Water Goal (cups):</label>
+                        <input type="number" id="goal-water" min="1" value="8">
+                        <label for="goal-meals">Meal Goal:</label>
+                        <input type="number" id="goal-meals" min="1" value="3">
+                        <button type="submit">Save Goals</button>
+                    </form>
+                    <p id="goal-status">⚠️ No goals set yet. Please set your goals!</p>
+                </section>
+
+                <!-- Water Tracker Section -->
+                <section id="water-tracker">
+                    <h2>Water Intake</h2>
+                    <div class="water-cups">
+                        <!-- Cups will be created dynamically with JS later in this div element -->
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                        <div class="cup small">250ml</div>
+                    </div>
+                    <p id="water-status">0 / 8 cups</p>
+                </section>
+
+                <!-- Meal Tracker Section -->
+                <section id="meal-tracker">
+                    <h2>Meal Logger</h2>
+                    <form id="meal-form">
+                        <label for="meal">Add a Meal:</label>
+                        <input type="text" id="meal" placeholder="e.g. Salad, Rice, Fruit" required>
+                        <button type="submit">Add</button>
+                    </form>
+                    <ul id="meal-list">
+                        <!-- Logged meals will appear here -->
+                    </ul>
+                </section>
+
+                <section id="summary">
+                    <h2>Daily Summary</h2>
+                    <p id ="summary-text">No progress yet... Start tracking!</p>
+                    <div class="progress">
+                        <div id="progress-bar"></div>
+                    </div>
+                </section>
+
+                <section id="weekly-stats">
+                    <h2>📊 Weekly Stats</h2>
+                    <canvas id="statsChart" width="400" height="200"></canvas>
+                </section>
+
+                <section id="reset-section">
+                    <button id="reset-today" title="Clears only today's water & meal logs.">🗑️ Reset Today's Data</button>
+                    <button id="reset-all" title="Clears All logs but keeps your goals safe.">♻️ Reset All Data</button>
+                </section>
+
+            </main>
+        </div>
+            <footer>
+                <p>Built with 💚 by <b>Teja Janga</b></p>
+            </footer>
+
+            <!-- Link JS -->
+            <script src="script.js"></script>
+
+    </body>
+</html>
